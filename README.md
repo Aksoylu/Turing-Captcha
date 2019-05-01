@@ -1,5 +1,5 @@
 # What is Turing Captcha
-Unlike all the captcha systems that you have used so far x is completely independent and free.
+Unlike all the captcha systems that you have used so far Turing Captcha is completely independent and free.
 
 In addition to the usual 'retype' type captcha, there are too many question combinations by asking logical or mathematical questions.
 Therefore it cannot be manipulated by intelligent systems.
