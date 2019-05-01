@@ -1,0 +1,84 @@
+<h1> Example Page of Turing Captcha </h1>
+<br>
+You can add Turing Captcha to your project with only this one line of code ! <br> 
+
+<h4>How can i implements Turing Captcha in my project ? </h4><br>
+
+Step 1: Copy Turingcaptcha folder in your project's directory. <br><br>
+
+Step 2 : Copy this iframe code and paste in your code <br><br>
+
+Step 3: in backend (php side); if value of  <br> <font color="green">$_SESSION["XCAPTCHA_QUESTION"]</font> 
+
+is equals to TRUE,<br> this means user has verified himself as human.
+
+
+<br><br>
+
+
+<iframe src="captcha.php" width="400px" height="250px"></iframe>
+
+
+<br> <br>
+
+
+<h4>How to add or remove fonts ? </h4><br>
+
+Attention : xx is supports only .otf font types for now. <br><br>
+if you want use another font format, you must work on drawcaptcha.php <br><br>
+
+Step 1: Copy your .otf font file into turingcaptcha/fonts directory <br><br>
+
+Step 2: Edit settings.php, <br>
+add your new font's name without file extension into <br>
+<font color="green">$FONTS = array();</font>
+
+<h4>How to add humanistic-logic questions ?</h4><br>
+
+Edit settings.php
+add your new question answer duo into <br><br>
+<font color="green">$TURING_QUESTIONS = array();</font>
+<br><br>
+
+example : <br><br>
+Q: Capital city of Turkey <br>
+A : Ankara <br>
+Code : <br>
+
+<font color="green">"$TURING_QUESTIONS = array(...,Capital city of Turkey" => "Ankara");</font>
+
+
+<h4>What should i know more ?</h4><br>
+
+
+Turing Captcha supports three types of questions.<br>
+
+<br>
+
+-  Math Questions : system asks simple mathematical questions to users
+
+<br><br>
+
+- Turing Questions : system asks humanistic - cultural questions to users<br><br>
+example; <br>q:Capital city of Turkey<br>a:Ankara
+
+<br><br>
+- Captcha Questions : system asks regular captcha retype questions to users.
+
+<br><br>
+
+you can enable or disable easily any of these question types with updating value of <br><Br>
+<font color="green">
+$IS_MATH_QUESTIONS_ENABLED<br>
+$IS_TURING_QUESTIONS_ENABLED<br>
+IS_CAPTCHA_QUESTIONS_ENABLED
+</font>
+<br><br>
+Also you can adjust difficulty level of math questions with updating <br>
+value of <font color="green">$MATH_QUESTIONS_DIFFICULTY  </font> variable.<br><br>
+
+1 : Easy <br>
+2: Medium <br>
+3: Humans maybe can't solve <br>
+
+
