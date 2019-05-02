@@ -1,13 +1,14 @@
 <?php
-require "settings.php";
 session_start();
+require "settings.php";
+
 
 if($_POST)
 {
 
 	$ajax = $_POST["query"];    
 
-    $key = security($ajax["keycode"]);
+    $key = $ajax["keycode"];
 
     if($key == "get_guide")
     {
@@ -18,7 +19,7 @@ if($_POST)
     }
     else if ($key == "verification")
     {
-    	$data = security($ajax["captchatext"]);
+    	$data = $ajax["captchatext"];
     	
 
     	if(isset($_SESSION["XCAPTCHA_QUESTION"]))
@@ -252,13 +253,5 @@ switch ($prob_result) {
 
 
 
-function security($data)
-{
-
-	$data = mysql_real_escape_string(htmlspecialchars(strip_tags(trim(addslashes($data)))));
-	
-	return $data;
-	
-}
 
 ?>
