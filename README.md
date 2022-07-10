@@ -21,7 +21,7 @@ Therefore it cannot be manipulated by intelligent systems.
 You can add Turing Captcha to your project with only this one line of code !  
 For getting started, you should get clone.zip of project and open example.html
 
-if you looking for a ready-running example, look at : http://turingcaptcha.aksoylu.space
+if you looking for a ready-running example, look at : http://turing-captcha.umitaksoylu.com
 
 
 #### How can i implement Turing Captcha in my project ?
